@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/drawable/ic_agregar.xml" value="0.3335" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.3335" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/drawable/ic_baseline_videogame_asset_24.xml" value="0.2985" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/drawable/ic_delete.xml" value="0.2985" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
@@ -17,6 +19,9 @@
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/activity_principal.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/content_principal.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/fragment_add_juego.xml" value="0.32323232323232326" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/fragment_juego.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/layout/juego_fila.xml" value="0.75" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Luisk/Documents/Movil/Juegos/app/src/main/res/menu/principal.xml" value="0.36666666666666664" />
       </map>

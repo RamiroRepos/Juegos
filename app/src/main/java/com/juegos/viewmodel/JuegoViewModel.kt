@@ -1,13 +1,38 @@
 package com.juegos.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
+import com.juegos.data.JuegoDatabase
+import com.juegos.model.Juego
+import com.juegos.repository.JuegoRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class JuegoViewModel : ViewModel() {
+class JuegoViewModel(application: Application) : AndroidViewModel(application) {
+    val getAllDate: LiveData<List<Juego>>
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val repository: JuegoRepository
+
+    init {
+        val juegoDao = JuegoDatabase.getDatabase(application).juegoDao()
+        repository = JuegoRepository(juegoDao)
+        getAllDate = repository.getAllData
     }
-    val text: LiveData<String> = _text
+
+    fun addJuego (juego: Juego){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.addJuego(juego)}
+    }
+
+    fun updateJuego (juego: Juego){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateJuego(juego)}
+    }
+
+    fun deteleJuego (juego: Juego){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.delteJuego(juego)}
+    }
+
+
 }

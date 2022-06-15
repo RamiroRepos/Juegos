@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 
         val email = binding.etCorreo.text.toString()
         val clave = binding.etClave.text.toString()
-        if (email != ""  || clave != ""){
+
+        if (email != ""  && clave != ""){
             //Se hace el registro
             auth.createUserWithEmailAndPassword(email,clave).addOnCompleteListener(this){ task ->
                 if (task.isSuccessful){
@@ -70,11 +71,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun haceLogin() {
+
         val email = binding.etCorreo.text.toString()
         val clave = binding.etClave.text.toString()
-        if (email != ""  || clave != ""){
+
+        if (email != ""  && clave != ""){
             //Se hace el login
-            auth.createUserWithEmailAndPassword(email,clave).addOnCompleteListener(this){ task ->
+            auth.signInWithEmailAndPassword(email,clave).addOnCompleteListener(this){ task ->
                 if (task.isSuccessful){
                     Log.d("Autenticando", "Autenticado")
                     val user = auth.currentUser
