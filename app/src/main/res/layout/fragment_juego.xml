@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.juegos.JuegoFragment" >
+    tools:context=".ui.juego.JuegoFragment" >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclador"
@@ -29,8 +29,11 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:contentDescription="@string/bt_agregar"
+        android:focusable="true"
         android:src="@drawable/ic_agregar"
-        app:backgroundTint="#44C616"
+        app:backgroundTint="#74609A"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ImageContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

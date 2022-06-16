@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AgregarJuego"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".AddJuegoFragment" >
+    tools:context=".ui.juego.AddJuegoFragment">
 
     <EditText
         android:id="@+id/et_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/msg_nombre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:text="@string/msg_nombre"
-        android:autofillHints="" />
+        android:textColor="#8770A6"
+        android:textColorHint="#757575" />
 
     <EditText
         android:id="@+id/et_categoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/msg_categoria"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:text="@string/msg_categoria"
-        android:autofillHints="" />
+        android:textColor="#8770A6" />
 
     <EditText
         android:id="@+id/et_calificacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/msg_calificacion"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:text="@string/msg_calificacion"
-        android:autofillHints="" />
+        android:textColor="#8770A6" />
 
     <EditText
         android:id="@+id/et_tamaño"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/msg_tamaño"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:text="@string/msg_tamaño"
-        android:autofillHints="" />
+        android:textColor="#8770A6" />
 
     <Button
         android:id="@+id/bt_agregar"

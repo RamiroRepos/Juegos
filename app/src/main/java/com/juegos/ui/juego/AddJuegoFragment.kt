@@ -1,4 +1,4 @@
-package com.juegos.ui.juegos
+package com.juegos.ui.juego
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -24,17 +24,18 @@ class AddJuegoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        juegoViewModel = ViewModelProvider(this)[JuegoViewModel::class.java]
         _binding = FragmentAddJuegoBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+
+        juegoViewModel = ViewModelProvider(this)[JuegoViewModel::class.java]
+        //val root: View = binding.root
 
         //Se agrega la funcion para agregar un lugar
-        binding.btAgregar.setOnClickListener{ addLugar() }
+        binding.btAgregar.setOnClickListener{ addJuego() }
 
         return binding.root
     }
 
-    private fun addLugar() {
+    private fun addJuego() {
         val nombre = binding.etNombre.text.toString()
         if(nombre.isNotEmpty()){
             val categoria = binding.etCategoria.text.toString()
@@ -42,10 +43,10 @@ class AddJuegoFragment : Fragment() {
             val tamaño = binding.etTamaO.text.toString()
             val juego = Juego(0, nombre, categoria, calificacion, tamaño,"","","","")
             juegoViewModel.addJuego(juego)
-            Toast.makeText(requireContext(), "Lugar Agregado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.msg_juego_agregado), Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_addJuegoFragment_to_nav_juego)
         }else{
-            Toast.makeText(requireContext(), "Faltan Datos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.msg_faltan_datos), Toast.LENGTH_SHORT).show()
         }
     }
 

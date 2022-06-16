@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_juego"
-        android:name="com.juegos.ui.juegos.JuegoFragment"
+        android:name="com.juegos.ui.juego.JuegoFragment"
         android:label="@string/menu_juego"
         tools:layout="@layout/fragment_juego" >
         <action
@@ -28,9 +28,9 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/addJuegoFragment"
-        android:name="com.juegos.ui.juegos.AddJuegoFragment"
-        android:label="fragment_add_juego"
-        tools:layout="@layout/fragment_add_juego" >
+        android:name="com.juegos.ui.juego.AddJuegoFragment"
+        android:label="@string/msg_agregar_juego"
+        tools:layout="@layout/fragment_add_juego">
         <action
             android:id="@+id/action_addJuegoFragment_to_nav_juego"
             app:destination="@id/nav_juego" />

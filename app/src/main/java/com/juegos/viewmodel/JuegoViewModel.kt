@@ -20,19 +20,15 @@ class JuegoViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun addJuego (juego: Juego){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.addJuego(juego)}
+        viewModelScope.launch(Dispatchers.IO) {repository.addJuego(juego)}
     }
 
     fun updateJuego (juego: Juego){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.updateJuego(juego)}
+        viewModelScope.launch(Dispatchers.IO) {repository.updateJuego(juego)}
     }
 
     fun deteleJuego (juego: Juego){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.delteJuego(juego)}
+        viewModelScope.launch(Dispatchers.IO) {repository.deleteJuego(juego)}
     }
-
 
 }

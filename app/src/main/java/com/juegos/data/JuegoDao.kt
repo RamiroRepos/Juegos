@@ -7,15 +7,15 @@ import com.juegos.model.Juego
 @Dao
 interface JuegoDao {
 
-    @Query ( "SELECT * FROM JUEGO")
-    fun getAllData() : LiveData<List<Juego>>
-
     @Insert( onConflict = OnConflictStrategy.IGNORE)
-    suspend fun addJuego(juego: Juego)
+    fun addJuego(Juego: Juego)
 
     @Update( onConflict = OnConflictStrategy.IGNORE)
-    suspend fun updateJuego(juego: Juego)
+    fun updateJuego(Juego: Juego)
 
     @Delete
-    suspend fun deleteJuego(juego: Juego)
+    fun deleteJuego(Juego: Juego)
+
+    @Query ( "SELECT * FROM JUEGO")
+    fun getAllData() : LiveData<List<Juego>>
 }

@@ -27,5 +27,6 @@ data class Juego(
     @ColumnInfo(name = "rutaAudio")
     val rutaAudio: String?,
     @ColumnInfo(name = "rutaImagen")
-    val rutaImagen: String?,) : Parcelable
+    val rutaImagen: String?,
+) : Parcelable
 

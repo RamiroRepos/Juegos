@@ -22,5 +22,8 @@
     <string name="msg_tamaño">Tamaño</string>
     <string name="bt_agregar">Agregar Juego</string>
     <string name="msg_imagen">Imagen del Juego</string>
+    <string name="msg_juego_agregado">Juego Agregado</string>
+    <string name="msg_faltan_datos">Faltan Datos</string>
+    <string name="msg_agregar_juego">Agregar Juego</string>
 
 </resources>
